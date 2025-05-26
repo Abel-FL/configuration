@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ecommerce-db:5435/ecommerce_user
+    url: jdbc:postgresql://ecommerce-db:5435/product
     username: ecommerce_user
     password: ecommerce_pass
 
