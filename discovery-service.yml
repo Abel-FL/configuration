@@ -2,10 +2,16 @@ eureka:
   instance:
     hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: false # No se registra a sí mismo
+    fetchRegistry: false # No necesita obtener registros
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    enabled: true # Habilita el cliente Eureka (necesario para el dashboard)
 
 server:
-  port: 8761
+  port: 8761 # Puerto del servidor Eureka
+
+# Configuración adicional recomendada para el servidor
+spring:
+  application:
+    name: discovery-service # Nombre identificativo
